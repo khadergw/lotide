@@ -1,14 +1,7 @@
-//const errormsg = 'failed'
 const assertEqual = function(actual, expected) {
   console.assert(actual===expected, {actual:expected}, 'failed')
 };
 
-// TEST CODE
-//assertEqual("Lighthouse Labs", "Bootcamp");
-//assertEqual(1, 1);
-
-var arr1 = [1,2,3]
-var arr2 = [1,2,3]
 function eqArrays(arr1, arr2){
   if(arr1.length==arr2.length){
     for(var i=0;i<arr1.length;i++){
@@ -28,6 +21,25 @@ function eqArrays(arr1, arr2){
     return false;
   }
 }
-//console.log("hi")
-//console.log(eqArrays(arr1, arr2))
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
+
+// TEST CODE
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
+
+/////////////////////////
+
+
+var arr1 = [1,2,3]
+var arr2 = [1,2,3]
+function assertArraysEqual(arr1, arr2){
+  if (eqArrays(arr1,arr2)) {
+    console.log("two arrays are equal")
+  } 
+  else{
+    console.log("two arrays are not equal")
+  }
+}
+  
+assertArraysEqual(arr1,arr2)
+
+assertArraysEqual([1,2,3], [1,2,3])
