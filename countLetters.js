@@ -14,3 +14,4 @@ const countLetters = function(string){
   }
   return output;
 };
+console.log(countLetters("hi There"));
