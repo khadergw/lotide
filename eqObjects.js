@@ -5,10 +5,12 @@ const assertEqual = function(actual, expected) {
 
 const eqObjects = function(object1, object2) {
 
-  if(Object.keys(object1).length !== Object.keys(object2).length) return false;
-  for(let item in object1){
-    if (typeof object1[item] === 'object' && object1[item] !== null) {
-      if (!eqObjects(object1[item], object2[item])) return false;
+  if(Object.keys(object1).length !== Object.keys(object2).length) 
+    return false;
+  for(let item in object2){
+    if (typeof object2[item] === 'object') {
+      if (!eqObjects(object2[item], object1[item]))
+        return false;
     } else if (object1[item] !== object2[item]) {
       return false;
     }

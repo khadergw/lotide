@@ -35,13 +35,13 @@ function assertArraysEqual(arr1, arr2){
 
 function without(source,itemsToRemove){
   
-  const newArray = [];
+  const result = [];
   for(let i=0; i< source.length; i++){
     if (!itemsToRemove.includes(source[i])){
-      newArray.push(source[i])
+      result.push(source[i])
     }
   }
-  return newArray;
+  return result;
 }
 
 

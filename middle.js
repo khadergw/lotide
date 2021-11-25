@@ -36,11 +36,11 @@ const middle = function(array) {
 
   if (length < 3) {
     return [];
-  } else if (length % 2 === 0) { // even number of elements
-    return [array[Math.round(length / 2) - 1], array[Math.round(length / 2)]];
+  } else if (length % 2 === 0) { //i.e even number
+    return [array[Math.round(length / 2) - 1], array[Math.round(length / 2)]]; // i.e. 2 numbers in the middle
 
-  } else if (length % 2 === 1) { // odd number of elements
-    return [array[Math.floor(length / 2)]];
+  } else if (length % 2 === 1) { //i.e. odd number
+    return [array[Math.floor(length / 2)]]; // i.e. the number in the middle
   }
 };
 console.log(middle([2,3,4,0]));

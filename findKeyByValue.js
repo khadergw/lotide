@@ -3,11 +3,11 @@ const assertEqual = function(actual, expected) {
 };
 /////////////////
 
-const findKeyByValue = function(object,value){
+const findKeyByValue = function(obj,val){
   let key = undefined;
-  for(let item in object){
-    if(object[item] === value){
-      key = item;
+  for(let show in obj){
+    if(obj[show] === val){
+      key = show;
     }
   }
   return key;

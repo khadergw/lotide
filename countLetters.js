@@ -3,13 +3,13 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string){
-  let output = {};
+  let result = {};
   for(let letter of string){
-    if(output[letter] == undefined){
-      output[letter] = 1;
+    if(result[letter] == undefined){
+      result[letter] = 1;
       }
       else{
-        output[letter] += 1;
+        result[letter] += 1;
       } 
   }
   return output;
