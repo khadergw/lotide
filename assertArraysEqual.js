@@ -1,30 +1,35 @@
-const assertEqual = function(actual, expected) {
-  console.assert(actual===expected, {actual:expected}, 'failed')
-};
+const assertEqual = require('./assertEqual');
 
-function eqArrays(arr1, arr2){
-  if(arr1.length==arr2.length){
-    for(var i=0;i<arr1.length;i++){
+const eqArrays = require('./eqArrays');
+
+
+// const assertEqual = function(actual, expected) {
+//   console.assert(actual===expected, {actual:expected}, 'failed')
+// };
+
+// function eqArrays(arr1, arr2){
+//   if(arr1.length==arr2.length){
+//     for(var i=0;i<arr1.length;i++){
    
-      if (arr1[i]!== arr2[i]){
-        console.log("arrays are not equal")
-        return false;
-      }
+//       if (arr1[i]!== arr2[i]){
+//         console.log("arrays are not equal")
+//         return false;
+//       }
    /*   else{
         console.log("arrays aren't equal")
       }*/
      
-    }
-    return true;
-  }
-  else{
-    return false;
-  }
-}
+//     }
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// // TEST CODE
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
 
 /////////////////////////
 
@@ -40,6 +45,5 @@ function assertArraysEqual(arr1, arr2){
   }
 }
   
-assertArraysEqual(arr1,arr2)
 
-assertArraysEqual([1,2,3], [1,2,3])
+module.exports = assertArraysEqual;
