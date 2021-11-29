@@ -1,7 +1,10 @@
-//const errormsg = 'failed'
-const assertEqual = function(actual, expected) {
-  console.assert(actual===expected, {actual:expected}, 'failed')
-};
+const assertEqual = require('./assertEqual');
+
+
+// //const errormsg = 'failed'
+// const assertEqual = function(actual, expected) {
+//   console.assert(actual===expected, {actual:expected}, 'failed')
+// };
 
 // TEST CODE
 //assertEqual("Lighthouse Labs", "Bootcamp");
@@ -30,4 +33,6 @@ function eqArrays(arr1, arr2){
 }
 //console.log("hi")
 //console.log(eqArrays(arr1, arr2))
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
+
+
+module.exports = eqArrays;
